@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "## LOAD PACKAGES ####\nlibrary(dplyr)\nlibrary(ggplot2) \n\n## READ IN DATA AND ORGANIZE ####\n# Read in data\ndata = read.table(\"data/rcourse_lesson1_data.txt\", header = T, sep = \"\\t\")\n\n# Look at data\ndim(data)\nhead(data)\ntail(data)\nxtabs(~group, data) \n\n# Subset out bilinguals\ndata_bl = data %>%\n  filter(group == \"bilingual\") \n\n# Look at bilingual data\ndim(data_bl)\nhead(data_bl)\ntail(data_bl)\nxtabs(~group, data_bl)\nxtabs(~type, data_bl) \n",
+    "contents" : "## LOAD PACKAGES ####\nlibrary(dplyr)\nlibrary(ggplot2) \n\n## READ IN DATA AND ORGANIZE ####\n# Read in data\ndata = read.table(\"data/rcourse_lesson1_data.txt\", header = T, sep = \"\\t\")\n\n# Look at data\ndim(data)\nhead(data)\ntail(data)\nxtabs(~group, data) \n\n# Subset out bilinguals\ndata_bl = data %>%\n  filter(group == \"bilingual\") \n\n# Look at bilingual data\ndim(data_bl)\nhead(data_bl)\ntail(data_bl)\nxtabs(~group, data_bl)\nxtabs(~type, data_bl)\n\n## MAKE FIGURES ####\n# By group\ndata.plot = ggplot(data, aes(x = group, y = rt)) + \n  geom_boxplot()\ndata.plot \n\n## MAKE FIGURES ####\n# By group\n# Updated code with instructions to publish figure to pdf\ndata.plot = ggplot(data, aes(x = group, y = rt)) +\n  geom_boxplot()\npdf(\"figures/data.pdf\")\ndata.plot\ndev.off() \n\n\n",
     "created" : 1494610564919.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "120501043",
+    "hash" : "1033408775",
     "id" : "CC98F15A",
-    "lastKnownWriteTime" : 1494611389,
-    "last_content_update" : 1494611389871,
+    "lastKnownWriteTime" : 1494617424,
+    "last_content_update" : 1494617424792,
     "path" : "~/Documents/Statistics/R statistics/R/Piccinini course/rcourse_lesson1/Scripts/rcourse_lesson1.R",
     "project_path" : "Scripts/rcourse_lesson1.R",
     "properties" : {
